@@ -1,0 +1,106 @@
+/* Write some CSS below */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&family=Overpass:wght@100&display=swap');
+$color-primary: #404042;
+$color-secondary: #1A48E3;
+$color-tertiary: #CE2FAE;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Overpass", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: $color-primary;
+    background-color: whitesmoke;
+}
+h1, h2, h3{
+    font-family: "Chivo", Arial, Helvetica, sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 65vh;
+    padding: 9.5rem 0;
+    color: white;
+    background: url("./images/background.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    h1{
+        font-size: 45px;
+        margin-bottom: 1.5rem ;
+    }
+    p{
+        opacity: .7;
+        margin: 1rem 0;
+        font-size: 24px;
+    }
+    .btn-blue{
+        color: white;
+        background-color: $color-secondary;
+        border-radius: 25px;
+        padding: 1rem 3rem;
+        text-decoration: none;
+        font-weight: bold;
+        transition: .3s;
+        &:hover{
+            background-color: rgb(98, 0, 255);
+            box-shadow: 6px 6px 12px $color-tertiary;
+        }
+    }
+}
+.container{
+    width: 62%;
+    margin: 4rem auto;
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+        margin: 2rem 0;
+    }
+    .card-white{
+        box-shadow: 0 0 16px rgba(0,0,0,0.1);        border-radius: 15px;
+        padding: 1.5rem;
+        padding-bottom: 2.5rem;
+        h3{
+            margin: 1rem 0;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+}
+footer{
+    width: 100%;
+    background: $color-primary;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+    img{
+        width: 8rem;
+        margin: 2rem auto;
+        transition: .3ms;
+        &:hover{
+            transform: scale(1.2);
+            }
+    }
+    
+}
+
+@media all and (max-width: 767px){
+    .container{
+        width: 80%;
+        .cards{
+            grid-template-columns: 1fr;
+            margin: 3rem;
+        }
+    }
+    
+}
+@media all and (min-width:768px) and (max-width:1024px){
+    .container .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+}
